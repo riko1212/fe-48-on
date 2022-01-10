@@ -1,0 +1,57 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.header {
+    background-color: gray;
+}
+
+.header-link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+}
+
+.list {
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/*
+ - Универсальный селектор 
+ - тега
+ - ID
+ - class
+
+*/
+
+/* #text,
+#text1 {
+    color: violet;
+}
+
+.text {
+    color: green;
+}
+
+.title {
+    font-size: 40px;
+    line-height: 1.2;
+    color: hotpink;
+}
+
+.title {
+    font-size: 32px;
+    color: indianred;
+} */
+
+.prices-item .prices-text {
+}
