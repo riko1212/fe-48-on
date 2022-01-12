@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="./css/styles.css" />
@@ -21,10 +21,12 @@
                 /></a>
                 <ul class="header-list list">
                     <li class="header-item">
-                        <a href="" class="header-link">О нас</a>
+                        <a href="" class="header-link current">О нас</a>
                     </li>
                     <li class="header-item">
-                        <a href="" class="header-link">Услуги и цены</a>
+                        <a href="./portfolio.html" class="header-link"
+                            >Услуги и цены</a
+                        >
                     </li>
                     <li class="header-item">
                         <a href="#masters" class="header-link">Мастера</a>
@@ -49,7 +51,7 @@
                         <a href="" class="hero-link">Youtube</a>
                     </li>
                 </ul>
-                <p lang="en" class="hero-pre-title">
+                <p lang="en" class="hero-pre-title pre-title">
                     A hair salon for men in Kyiv
                 </p>
                 <h1 lang="en" class="hero-title">BarberShop</h1>
@@ -78,8 +80,10 @@
                         />
                     </li>
                 </ul>
-                <p class="about-pre-title">О нас</p>
-                <h2 class="about-title">Лучший Барбершоп твоего города</h2>
+                <p class="about-pre-title pre-title">О нас</p>
+                <h2 class="about-title section-title">
+                    Лучший Барбершоп твоего города
+                </h2>
                 <p class="about-after-title">
                     Если ты хочешь добавить в свой образ больше уверенности –
                     тебе точно к нам.
@@ -95,10 +99,10 @@
                 <button type="button" class="about-btn">онлайн-запись</button>
             </section>
             <section class="prices section">
-                <p class="prices-pre-title">
+                <p class="prices-pre-title pre-title">
                     Проведи время в компании лучших мастеров
                 </p>
-                <h2 class="prices-title">Услуги и цены</h2>
+                <h2 class="prices-title section-title">Услуги и цены</h2>
                 <ul class="prices-list list">
                     <li class="prices-item">
                         <p class="prices-text">Мужская стрижка</p>
@@ -162,54 +166,73 @@
                         </p>
                     </li>
                 </ul>
-                <p class="reasons-pre-title">старая традиционная школа</p>
-                <h2 class="reasons-title">Почему приходят именно к нам?</h2>
+                <p class="reasons-pre-title pre-title">
+                    старая традиционная школа
+                </p>
+                <h2 class="reasons-title section-title">
+                    Почему приходят именно к нам?
+                </h2>
                 <p class="reasons-after-title">
                     О нас говорят только хорошее. Но лучше 1 раз увидеть и
                     прочувствовать, чем 10 раз прочитать.
                 </p>
             </section>
-            <section id="masters">
-                <p>для настоящих ценителей атмосферы</p>
-                <h2>Наши мастера</h2>
-                <ul class="list">
-                    <li>
+            <section id="masters" class="masters">
+                <p class="masters-pre-title pre-title">
+                    для настоящих ценителей атмосферы
+                </p>
+                <h2 class="masters-title section-title">Наши мастера</h2>
+                <ul class="list masters-list">
+                    <li class="masters-item">
                         <img
                             src="./images/masters-img-1.jpg"
                             alt="барбер стрижет клиента"
                             width="370"
                             height="346"
+                            class="masters-item-img"
                         />
-                        <h3 lang="en">John Smith</h3>
-                        <p lang="en">Extreme Barber</p>
+                        <h3 class="masters-item-title" lang="en">John Smith</h3>
+                        <p class="masters-item-text" lang="en">
+                            Extreme Barber
+                        </p>
                     </li>
-                    <li>
+                    <li class="masters-item">
                         <img
                             src="./images/masters-img-2.jpg"
                             alt="барбер стрижет клиента"
                             width="370"
                             height="346"
+                            class="masters-item-img"
                         />
-                        <h3 lang="en">Michele Doe</h3>
-                        <p lang="en">Extreme Barber</p>
+                        <h3 class="masters-item-title" lang="en">
+                            Michele Doe
+                        </h3>
+                        <p class="masters-item-text" lang="en">
+                            Extreme Barber
+                        </p>
                     </li>
-                    <li>
+                    <li class="masters-item">
                         <img
                             src="./images/masters-img-3.jpg"
                             alt="барбер стрижет клиента"
                             width="370"
                             height="346"
+                            class="masters-item-img"
                         />
-                        <h3 lang="en">Alan Black</h3>
-                        <p lang="en">Extreme Barber</p>
+                        <h3 class="masters-item-title" lang="en">Alan Black</h3>
+                        <p class="masters-item-text" lang="en">
+                            Extreme Barber
+                        </p>
                     </li>
                 </ul>
             </section>
             <section>
-                <p>На латинском языке “барба” означает “борода”</p>
-                <h2 hidden>Галерея</h2>
-                <ul class="list">
-                    <li>
+                <p class="gallery-pre-title pre-title">
+                    На латинском языке “барба” означает “борода”
+                </p>
+                <h2 class="visually-hidden">Галерея</h2>
+                <ul class="list gallery-list">
+                    <li class="gallery-item">
                         <img
                             src="./images/gallery-img-1.jpg"
                             alt="барбер стрижет клиента"
@@ -217,7 +240,7 @@
                             height="360"
                         />
                     </li>
-                    <li>
+                    <li class="gallery-item">
                         <img
                             src="./images/gallery-img-2.jpg"
                             alt="барбер стрижет клиента"
@@ -225,7 +248,7 @@
                             height="360"
                         />
                     </li>
-                    <li>
+                    <li class="gallery-item">
                         <img
                             src="./images/gallery-img-3.jpg"
                             alt="барбер стрижет клиента"
@@ -233,7 +256,7 @@
                             height="360"
                         />
                     </li>
-                    <li>
+                    <li class="gallery-item">
                         <img
                             src="./images/gallery-img-4.jpg"
                             alt="барбер стрижет клиента"

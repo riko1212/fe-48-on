@@ -1,57 +1,268 @@
+:root {
+    --header-text-color: #ffffff;
+    --first-btn-color: #ffffff;
+    --second-btn-color: #303030;
+    --first-title-color: #ffffff;
+    --second-title-color: #303030;
+    --first-text-color: #303030;
+    --accent-color: #ff6c00;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
-}
-
-.header {
-    background-color: gray;
-}
-
-.header-link {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.1em;
-    color: #ffffff;
 }
 
 .list {
     list-style: none;
 }
 
-p {
-    margin: 0;
-}
 a {
     text-decoration: none;
 }
 
-/*
- - Универсальный селектор 
- - тега
- - ID
- - class
-
-*/
-
-/* #text,
-#text1 {
-    color: violet;
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 
-.text {
-    color: green;
+.pre-title {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
-.title {
-    font-size: 40px;
-    line-height: 1.2;
-    color: hotpink;
+.section-title {
+    font-family: "Raleway", sans-serif;
+    font-size: 42px;
+    line-height: calc(49 / 42);
+    letter-spacing: 0.05em;
 }
 
-.title {
-    font-size: 32px;
-    color: indianred;
-} */
+/*----------------- HEADER----------------- */
 
-.prices-item .prices-text {
+.header {
+    background-color: gray;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+}
+
+.header-link {
+    color: var(--header-text-color);
+}
+
+.header-link:hover,
+.header-link:focus {
+    color: var(--accent-color);
+}
+
+.header-link-tel {
+    color: var(--header-text-color);
+}
+
+.header-btn {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--first-btn-color);
+}
+
+.header-btn:hover,
+.header-btn:focus {
+    color: var(--first-btn-color);
+}
+
+.current {
+    color: var(--accent-color);
+}
+
+/*----------------- HERO----------------- */
+
+.hero {
+    background-color: gray;
+}
+
+.hero-link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: var(--first-text-color);
+}
+
+.hero-link:hover,
+.hero-link:focus {
+    color: var(--accent-color);
+}
+
+.hero-pre-title {
+    color: rgba(157, 164, 189, 0.6);
+}
+
+.hero-title {
+    font-family: "Raleway", sans-serif;
+    font-size: 72px;
+    line-height: calc(85 / 72);
+    letter-spacing: 0.05em;
+    color: #ffffff;
+}
+
+.hero-after-title {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: #9da4bd;
+}
+
+/*----------------- ABouT----------------- */
+
+.about-pre-title {
+    color: var(--first-text-color);
+}
+
+.about-title {
+    color: var(--second-title-color);
+}
+
+.about-after-title {
+    color: #555555;
+}
+
+.about-text {
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+    color: #555555;
+}
+
+.about-btn {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--second-btn-color);
+}
+
+.about-btn:hover,
+.about-btn:focus {
+    color: var(--accent-color);
+}
+
+/*----------------- PRICES----------------- */
+
+.prices {
+    background-color: #303030;
+}
+
+.prices-pre-title {
+    color: rgba(157, 164, 189, 0.6);
+}
+
+.prices-title {
+    color: var(--first-title-color);
+}
+
+.prices-text {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: #9da4bd;
+}
+
+.prices-btn {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--first-btn-color);
+}
+
+.prices-btn:hover,
+.prices-btn:focus {
+    color: var(--accent-color);
+}
+
+/*----------------- REASONS----------------- */
+
+.reasons-count {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: calc(57 / 42);
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: var(--first-text-color);
+}
+
+.reasons-item-text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-align: center;
+    color: var(--first-text-color);
+}
+
+.reasons-pre-title {
+    color: var(--first-text-color);
+}
+
+.reasons-title {
+    color: var(--first-text-color);
+}
+
+.reasons-after-title {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: #555555;
+}
+
+/*----------------- MASTERS----------------- */
+
+.masters-pre-title {
+    color: var(--first-text-color);
+}
+
+.masters-title {
+    color: var(--first-text-color);
+}
+
+.masters-item-title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(25 / 18);
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--second-title-color);
+}
+
+.masters-item-text {
+    font-size: 14px;
+    line-height: calc(19 / 14);
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+}
+
+/*----------------- gallery----------------- */
+
+.gallery-pre-title {
+    color: var(--first-text-color);
 }
