@@ -8,9 +8,31 @@
   --accent-color: #ff6c00;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
-  text-transform: uppercase;
 }
 
 .list {
@@ -19,6 +41,14 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
 }
 
 .visually-hidden {
@@ -57,6 +87,8 @@ a {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-link {
@@ -112,6 +144,7 @@ a {
 
 .hero-pre-title {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: 20px;
 }
 
 .hero-title {
@@ -120,6 +153,7 @@ a {
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
   color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .hero-after-title {
@@ -131,16 +165,24 @@ a {
 
 /*----------------- ABouT----------------- */
 
+.about {
+  padding-top: 139px;
+  padding-bottom: 121px;
+}
+
 .about-pre-title {
   color: var(--first-text-color);
+  margin-bottom: 20px;
 }
 
 .about-title {
   color: var(--second-title-color);
+  margin-bottom: 20px;
 }
 
 .about-after-title {
   color: #555555;
+  margin-bottom: 20px;
 }
 
 .about-text {
@@ -148,6 +190,7 @@ a {
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 40px;
 }
 
 .about-btn {
@@ -169,14 +212,18 @@ a {
 
 .prices {
   background-color: #303030;
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
 
 .prices-pre-title {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: 20px;
 }
 
 .prices-title {
   color: var(--first-title-color);
+  margin-bottom: 44px;
 }
 
 .prices-text {
@@ -203,6 +250,11 @@ a {
 
 /*----------------- REASONS----------------- */
 
+.reasons {
+  padding-top: 121px;
+  padding-bottom: 130px;
+}
+
 .reasons-count {
   font-weight: 700;
   font-size: 42px;
@@ -222,10 +274,12 @@ a {
 
 .reasons-pre-title {
   color: var(--first-text-color);
+  margin-bottom: 20px;
 }
 
 .reasons-title {
   color: var(--first-text-color);
+  margin-bottom: 20px;
 }
 
 .reasons-after-title {
@@ -237,12 +291,21 @@ a {
 
 /*----------------- MASTERS----------------- */
 
+.masters {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
 .masters-pre-title {
   color: var(--first-text-color);
 }
 
 .masters-title {
   color: var(--first-text-color);
+}
+
+.masters-item-content {
+  padding-top: 30px;
 }
 
 .masters-item-title {
@@ -252,6 +315,7 @@ a {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--second-title-color);
+  margin-bottom: 8px;
 }
 
 .masters-item-text {
@@ -264,6 +328,12 @@ a {
 
 /*----------------- gallery----------------- */
 
+.gallery {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
 .gallery-pre-title {
   color: var(--first-text-color);
+  margin-bottom: 44px;
 }
