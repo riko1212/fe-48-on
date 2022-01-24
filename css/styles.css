@@ -165,7 +165,15 @@ a {
 }
 
 .hero-right {
-  background-color: gray;
+  background-color: rgb(31, 29, 29);
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.2),
+      rgba(25, 28, 38, 0.2)
+    ),
+    url(../images/hero-bg.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   flex-grow: 1;
   padding: 272px 0 206px 96px;
 }
@@ -389,6 +397,44 @@ a {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  margin-bottom: 30px;
+}
+
+.masters-socials-list {
+  display: flex;
+  justify-content: center;
+}
+
+.masters-socials-link {
+  width: 44px;
+  height: 44px;
+  background-color: tomato;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.masters-socials-icon {
+  fill: currentColor;
+}
+
+.masters-socials-link:hover {
+  background-color: teal;
+  color: tomato;
+}
+
+/* .masters-socials-link:hover {
+  background-color: teal;
+}
+
+.masters-socials-link:hover .masters-socials-icon {
+  fill: tomato;
+} */
+
+.masters-socials-item + .masters-socials-item {
+  margin-left: 10px;
 }
 
 /*----------------- gallery----------------- */
