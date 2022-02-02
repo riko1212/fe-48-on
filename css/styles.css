@@ -36,7 +36,7 @@ button {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .list {
@@ -52,7 +52,6 @@ a {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
 }
 
 .visually-hidden {
@@ -77,16 +76,35 @@ a {
 }
 
 .section-title {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 42px;
   line-height: calc(49 / 42);
   letter-spacing: 0.05em;
 }
 
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  background-color: transparent;
+  min-width: 160px;
+  height: 40px;
+  transition: color 300ms linear, background-color 300ms linear;
+}
+
 /*----------------- HEADER----------------- */
 
 .header {
-  background-color: gray;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -119,6 +137,7 @@ a {
 
 .header-link {
   color: var(--header-text-color);
+  transition: color 300ms linear;
 }
 
 .header-connect {
@@ -134,28 +153,29 @@ a {
 }
 
 .header-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: var(--first-btn-color);
   margin-left: 40px;
-  border: 1px solid #ff6c00;
-  border-radius: 25px;
-  background-color: transparent;
-  min-width: 160px;
-  height: 40px;
 }
 
 .header-btn:hover,
 .header-btn:focus {
   color: var(--first-btn-color);
+  background-color: var(--accent-color);
 }
 
 .current {
   color: var(--accent-color);
+  position: relative;
+}
+
+.current::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  background-color: var(--accent-color);
+  left: 0;
+  bottom: -48px;
 }
 
 /*----------------- HERO----------------- */
@@ -181,17 +201,24 @@ a {
   padding: 272px 0 206px 96px;
 }
 
+.hero-left {
+  width: 93px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 23px;
+  padding-bottom: 40px;
+}
+
 .hero-list {
   display: flex;
   align-items: center;
-  /* transform: rotate(-90deg); */
-
-  width: 93px;
+  transform: rotate(-90deg) translate(-19px);
+  transform-origin: top left;
 }
 
 .hero-list::before {
   display: block;
-  content: '';
+  content: "";
   flex-shrink: 0;
 
   width: 60px;
@@ -230,7 +257,7 @@ a {
 }
 
 .pre-title::before {
-  content: '';
+  content: "";
 
   width: 60px;
   height: 1px;
@@ -248,7 +275,7 @@ a {
 }
 
 .hero-title {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 72px;
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
@@ -268,6 +295,20 @@ a {
 .about {
   padding-top: 139px;
   padding-bottom: 121px;
+}
+
+.about-container {
+  display: flex;
+}
+
+.about-list {
+  display: flex;
+  flex-shrink: 0;
+  margin-right: 64px;
+}
+
+.about-item + .about-item {
+  margin-left: 30px;
 }
 
 .about-pre-title {
@@ -294,12 +335,6 @@ a {
 }
 
 .about-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: var(--second-btn-color);
 }
 
@@ -313,8 +348,13 @@ a {
 .prices {
   background-color: #111319;
   background-image: url(../images/price-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding-top: 130px;
   padding-bottom: 130px;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .prices-pre-title {
@@ -330,6 +370,7 @@ a {
 .price-wrap {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 
 .prices-list {
@@ -363,7 +404,7 @@ a {
 }
 
 .prices-item::before {
-  content: '';
+  content: "";
 
   border-bottom: 1px solid rgba(157, 164, 189, 0.12);
   margin-left: 6px;
@@ -384,13 +425,9 @@ a {
 }
 
 .prices-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: var(--first-btn-color);
+  margin: 0 auto;
+  display: block;
 }
 
 .prices-btn:hover,
@@ -405,6 +442,46 @@ a {
   padding-bottom: 130px;
 }
 
+.reasons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reasons-left,
+.reasons-right {
+  width: calc((100% - 30px) / 2);
+}
+
+.reasons-left {
+  display: flex;
+  justify-content: center;
+}
+
+.reasons-list {
+  display: flex;
+  width: 370px;
+  flex-wrap: wrap;
+}
+
+.reasons-item {
+  width: 170px;
+  height: 133px;
+  background-color: #f7f7f7;
+  padding: 20px 24px;
+}
+
+.reasons-item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.reasons-item:nth-child(even) {
+  margin-top: 30px;
+}
+
+.reasons-item-dif {
+  padding: 20px;
+}
+
 .reasons-count {
   font-weight: 700;
   font-size: 42px;
@@ -412,6 +489,9 @@ a {
   text-align: center;
   letter-spacing: 0.05em;
   color: var(--first-text-color);
+  display: block;
+  text-align: center;
+  margin-bottom: 6px;
 }
 
 .reasons-item-text {
@@ -444,6 +524,7 @@ a {
 .masters {
   padding-top: 130px;
   padding-bottom: 130px;
+  background-color: #f7f7f7;
 }
 
 .masters-pre-title {
@@ -468,6 +549,31 @@ a {
   /* flex-basis: calc((100% - 90px) / 3); */
   margin-left: 30px;
   margin-bottom: 30px;
+  position: relative;
+}
+
+.masters-item:hover .masters-top-text {
+  transform: translateY(0);
+}
+
+.masters-wrap {
+  position: relative;
+  overflow: auto;
+}
+
+.masters-top-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+  font-weight: 600;
+  background-color: #ff6a00a7;
+  padding: 30px;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
 }
 
 /* .masters-item + .masters-item {
@@ -544,4 +650,46 @@ a {
 .gallery-pre-title {
   color: var(--first-text-color);
   margin-bottom: 44px;
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.267);
+  position: fixed;
+  top: 0;
+  transition: opacity 500ms, visibility 500ms;
+}
+
+.backdrop.is-hidden .modal {
+  transform: rotate(-300deg) scale(0.5);
+}
+
+.modal {
+  width: 500px;
+  min-height: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0) scale(1);
+  transition: transform 500ms;
+}
+
+.modal-close-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #999999;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }

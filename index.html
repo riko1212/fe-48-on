@@ -30,10 +30,12 @@
           /></a>
           <ul class="header-list list">
             <li class="header-item">
-              <a href="" class="header-link current">О нас</a>
+              <a href="" class="header-link">О нас</a>
             </li>
             <li class="header-item">
-              <a href="./portfolio.html" class="header-link">Услуги и цены</a>
+              <a href="./portfolio.html" class="current header-link"
+                >Услуги и цены</a
+              >
             </li>
             <li class="header-item">
               <a href="#masters" class="header-link">Мастера</a>
@@ -47,7 +49,9 @@
           <a href="tel:+380441111111" class="header-link-tel"
             >+38 044 111 11 11</a
           >
-          <button type="button" class="header-btn">онлайн-запись</button>
+          <button type="button" class="header-btn btn" data-modal-open>
+            онлайн-запись
+          </button>
         </div>
       </div>
     </header>
@@ -55,14 +59,16 @@
       <!-- Hero -->
       <section class="hero">
         <div class="container hero-container">
-          <ul class="hero-list list">
-            <li class="hero-item">
-              <a href="" class="hero-link">Instagram</a>
-            </li>
-            <li class="hero-item">
-              <a href="" class="hero-link">Youtube</a>
-            </li>
-          </ul>
+          <div class="hero-left">
+            <ul class="hero-list list">
+              <li class="hero-item">
+                <a href="" class="hero-link">Instagram</a>
+              </li>
+              <li class="hero-item">
+                <a href="" class="hero-link">Youtube</a>
+              </li>
+            </ul>
+          </div>
           <div class="hero-right">
             <p lang="en" class="hero-pre-title pre-title pre-title-light-theme">
               A hair salon for men in Kyiv
@@ -77,7 +83,7 @@
       </section>
       <!-- About -->
       <section class="about section">
-        <div class="container">
+        <div class="container about-container">
           <ul class="about-list list">
             <li class="about-item">
               <img
@@ -97,22 +103,24 @@
               />
             </li>
           </ul>
-          <p class="about-pre-title pre-title pre-title-dark-theme">О нас</p>
-          <h2 class="about-title section-title">
-            Лучший Барбершоп твоего города
-          </h2>
-          <p class="about-after-title">
-            Если ты хочешь добавить в свой образ больше уверенности – тебе точно
-            к нам.
-          </p>
-          <p class="about-text">
-            Мы команда, которая никогда не останавливается на достигнутом и
-            жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
-            никогда не сможешь быть прежним. Мы команда, которая всегда с
-            клиентами "на одной волне". Поэтому, мы всегда готовы
-            усовершенствовать каждого, кто к нам приходит!
-          </p>
-          <button type="button" class="about-btn">онлайн-запись</button>
+          <div class="about-wrap">
+            <p class="about-pre-title pre-title pre-title-dark-theme">О нас</p>
+            <h2 class="about-title section-title">
+              Лучший Барбершоп твоего города
+            </h2>
+            <p class="about-after-title">
+              Если ты хочешь добавить в свой образ больше уверенности – тебе
+              точно к нам.
+            </p>
+            <p class="about-text">
+              Мы команда, которая никогда не останавливается на достигнутом и
+              жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
+              никогда не сможешь быть прежним. Мы команда, которая всегда с
+              клиентами "на одной волне". Поэтому, мы всегда готовы
+              усовершенствовать каждого, кто к нам приходит!
+            </p>
+            <button type="button" class="about-btn btn">онлайн-запись</button>
+          </div>
         </div>
       </section>
       <!-- Prices -->
@@ -160,40 +168,44 @@
               </li>
             </ul>
           </div>
-          <button type="button" class="prices-btn">онлайн-запись</button>
+          <button type="button" class="prices-btn btn">онлайн-запись</button>
         </div>
       </section>
       <!-- Reasons -->
       <section class="reasons section">
-        <div class="container">
-          <ul class="reasons-list list">
-            <li class="reasons-item">
-              <span class="reasons-count">600</span>
-              <p class="reasons-item-text">Довольных клиентов в день</p>
-            </li>
-            <li class="reasons-item">
-              <span class="reasons-count">50</span>
-              <p class="reasons-item-text">Наград за отличный сервис</p>
-            </li>
-            <li class="reasons-item">
-              <span class="reasons-count">20</span>
-              <p class="reasons-item-text">Лучших мастеров Киева</p>
-            </li>
-            <li class="reasons-item">
-              <span class="reasons-count">100</span>
-              <p class="reasons-item-text">Подарков постоянным клиентам</p>
-            </li>
-          </ul>
-          <p class="reasons-pre-title pre-title pre-title-dark-theme">
-            старая традиционная школа
-          </p>
-          <h2 class="reasons-title section-title">
-            Почему приходят именно к нам?
-          </h2>
-          <p class="reasons-after-title">
-            О нас говорят только хорошее. Но лучше 1 раз увидеть и
-            прочувствовать, чем 10 раз прочитать.
-          </p>
+        <div class="container reasons-container">
+          <div class="reasons-left">
+            <ul class="reasons-list list">
+              <li class="reasons-item">
+                <span class="reasons-count">600</span>
+                <p class="reasons-item-text">Довольных клиентов в день</p>
+              </li>
+              <li class="reasons-item">
+                <span class="reasons-count">50</span>
+                <p class="reasons-item-text">Наград за отличный сервис</p>
+              </li>
+              <li class="reasons-item">
+                <span class="reasons-count">20</span>
+                <p class="reasons-item-text">Лучших мастеров Киева</p>
+              </li>
+              <li class="reasons-item reasons-item-dif">
+                <span class="reasons-count">100</span>
+                <p class="reasons-item-text">Подарков постоянным клиентам</p>
+              </li>
+            </ul>
+          </div>
+          <div class="reasons-right">
+            <p class="reasons-pre-title pre-title pre-title-dark-theme">
+              старая традиционная школа
+            </p>
+            <h2 class="reasons-title section-title">
+              Почему приходят именно к нам?
+            </h2>
+            <p class="reasons-after-title">
+              О нас говорят только хорошее. Но лучше 1 раз увидеть и
+              прочувствовать, чем 10 раз прочитать.
+            </p>
+          </div>
         </div>
       </section>
       <!-- Masters -->
@@ -205,13 +217,21 @@
           <h2 class="masters-title section-title">Наши мастера</h2>
           <ul class="list masters-list">
             <li class="masters-item">
-              <img
-                src="./images/masters-img-1.jpg"
-                alt="барбер стрижет клиента"
-                width="370"
-                height="346"
-                class="masters-item-img"
-              />
+              <div class="masters-wrap">
+                <img
+                  src="./images/masters-img-1.jpg"
+                  alt="барбер стрижет клиента"
+                  width="370"
+                  height="346"
+                  class="masters-item-img"
+                />
+                <p class="masters-top-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Labore commodi voluptatem explicabo atque ea consectetur.
+                  Earum praesentium repellendus quasi consequuntur sunt neque
+                  eos obcaecati quam fuga labore facere, officiis quis! Labore
+                </p>
+              </div>
               <div class="masters-item-content">
                 <h3 class="masters-item-title" lang="en">John Smith</h3>
                 <p class="masters-item-text" lang="en">Extreme Barber</p>
@@ -344,5 +364,30 @@
         <li><a href="">Youtube</a></li>
       </ul>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          X
+        </button>
+      </div>
+    </div>
+    <script>
+      (() => {
+        const refs = {
+          openModalBtn: document.querySelector("[data-modal-open]"),
+          closeModalBtn: document.querySelector("[data-modal-close]"),
+          modal: document.querySelector("[data-modal]"),
+          bd: document.querySelector(".backdrop"),
+        };
+
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+        refs.bd.addEventListener("click", toggleModal);
+
+        function toggleModal() {
+          refs.modal.classList.toggle("is-hidden");
+        }
+      })();
+    </script>
   </body>
 </html>
