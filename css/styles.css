@@ -675,6 +675,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%) rotate(0) scale(1);
   transition: transform 500ms;
+  padding: 40px;
 }
 
 .modal-close-btn {
@@ -692,4 +693,49 @@ a {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #303030;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  font-size: 14px;
+  color: teal;
+}
+
+.modal-input::placeholder {
+  color: tomato;
+}
+
+/* .modal-input:required {
+  border-color: purple;
+} */
+
+.modal-label {
+  font-size: 12px;
+  color: #999999;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.modal-text {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  padding: 10px;
+  resize: none;
+  outline: none;
 }
