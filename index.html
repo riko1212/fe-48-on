@@ -328,33 +328,59 @@
         </div>
       </section>
       <!-- Form -->
-      <section>
-        <h2>Онлайн-запись</h2>
-      </section>
-      <!-- Contacts -->
-      <section>
-        <h2>Контакты</h2>
-        <address>
-          <ul class="list">
-            <li>
-              <a
-                href="https://goo.gl/maps/YjysKKPajJtUrSyb9"
-                target="_blank"
-                rel="noopener noreferrer nofollow "
-                >ул. Васильковская, 7А Киев, 08132</a
-              >
-            </li>
-            <li>
-              <a href="tel:+380441111111">+38 044 111 11 11</a>
-            </li>
-            <li>
-              <a href="mailto:barbershop@email.com">barbershop@email.com</a>
-            </li>
-          </ul>
-        </address>
-        <p>время работы</p>
-        <p>Ежедневно с 9:00 до 22:00</p>
-      </section>
+      <div class="contact-wrap">
+        <div class="container">
+          <section class="online">
+            <h2 class="online-title section-title">Онлайн-запись</h2>
+            <form class="online-form">
+              <div class="online-wrap">
+                <input
+                  type="text"
+                  name="online-name"
+                  class="online-input online-input-long"
+                  placeholder="Имя*"
+                />
+                <input
+                  type="tel"
+                  name="online-tel"
+                  class="online-input"
+                  placeholder="Телефон*"
+                />
+              </div>
+              <textarea
+                name="online-text"
+                class="online-text"
+                placeholder="сообщение"
+              ></textarea>
+              <button type="submit" class="online-btn btn">отправить</button>
+            </form>
+          </section>
+          <!-- Contacts -->
+          <section>
+            <h2>Контакты</h2>
+            <address>
+              <ul class="list">
+                <li>
+                  <a
+                    href="https://goo.gl/maps/YjysKKPajJtUrSyb9"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow "
+                    >ул. Васильковская, 7А Киев, 08132</a
+                  >
+                </li>
+                <li>
+                  <a href="tel:+380441111111">+38 044 111 11 11</a>
+                </li>
+                <li>
+                  <a href="mailto:barbershop@email.com">barbershop@email.com</a>
+                </li>
+              </ul>
+            </address>
+            <p>время работы</p>
+            <p>Ежедневно с 9:00 до 22:00</p>
+          </section>
+        </div>
+      </div>
     </main>
     <!-- Footer -->
     <footer>
@@ -373,14 +399,19 @@
         <form class="modal-form">
           <div class="form-field">
             <label for="user-name" class="modal-label">Введите имя*</label>
-            <input
-              type="text"
-              name="user-name"
-              class="modal-input"
-              placeholder="John Dou"
-              required
-              id="user-name"
-            />
+            <span class="modal-input-wrap">
+              <input
+                type="text"
+                name="user-name"
+                class="modal-input"
+                placeholder="John Dou"
+                required
+                id="user-name"
+              />
+              <svg class="modal-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </span>
           </div>
           <div class="form-field">
             <label for="user-email" class="modal-label">Введите почту</label>
@@ -414,60 +445,29 @@
               placeholder="коммент"
             ></textarea>
           </div>
-          <fieldset>
-            <legend>Size</legend>
-            <label for="big-size">40sm</label>
-            <input type="radio" name="size" id="big-size" value="big-size" />
-            <label for="small-size">30sm</label>
-            <input
-              type="radio"
-              name="size"
-              id="small-size"
-              value="small-size"
-            />
-          </fieldset>
-          <fieldset>
-            <legend>add</legend>
-            <label for="cheese">cheese</label>
+          <div class="form-field">
             <input
               type="checkbox"
-              checked
-              name="add"
-              id="cheese"
-              value="cheese"
+              class="modal-check"
+              id="modal-check"
+              name="modal-check"
             />
-            <label for="peperoni">peperoni</label>
-            <input type="checkbox" name="add" id="peperoni" value="peperoni" />
-          </fieldset>
-          <div class="form-field">
-            <label for="city">City</label>
-            <select name="pizza-city" id="city" class="modal-input">
-              <option value="London"></option>
-              <option value="Paris">Paris</option>
-              <option value="Novyy Rozdil">Novyy Rozdil</option>
-            </select>
+            <label for="modal-check" class="modal-check-text"
+              ><span
+                ><svg class="modal-check-icon" width="16" height="15">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              Подпишитесь на спам</label
+            >
           </div>
+
           <button type="submit">Submit</button>
           <button type="reset">Reset</button>
         </form>
       </div>
     </div>
-    <script>
-      (() => {
-        const refs = {
-          openModalBtn: document.querySelector("[data-modal-open]"),
-          closeModalBtn: document.querySelector("[data-modal-close]"),
-          modal: document.querySelector("[data-modal]"),
-        };
-
-        refs.openModalBtn.addEventListener("click", toggleModal);
-        refs.closeModalBtn.addEventListener("click", toggleModal);
-
-        function toggleModal() {
-          refs.modal.classList.toggle("is-hidden");
-        }
-      })();
-    </script>
+    <script src="./js/modal.js"></script>
   </body>
+  ß
 </html>
-user-name=Name& user-email=test%40mail.ua& user-tel=%28096%29111-11-11
