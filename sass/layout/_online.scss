@@ -1,0 +1,80 @@
+.online {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  width: calc(100% / 2 + 15px);
+  padding-right: 40px;
+}
+
+.online-title {
+  color: var(--first-title-color);
+  margin-bottom: 44px;
+}
+
+.online-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.online-input {
+  width: 260px;
+  height: 24px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.4);
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  transition: border-color 500ms;
+}
+
+.online-text {
+  width: 100%;
+  height: 76px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+  background-color: transparent;
+  border: none;
+  resize: none;
+  outline: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  transition: border-color 500ms;
+  margin-bottom: 44px;
+}
+
+.online-input::placeholder,
+.online-text::placeholder {
+  color: rgba(157, 164, 189, 0.4);
+  transition: color 500ms;
+}
+
+.online-input:hover,
+.online-input:focus,
+.online-text:hover,
+.online-text:focus {
+  border-color: #ffffff;
+}
+
+.online-input:hover::placeholder,
+.online-input:focus::placeholder,
+.online-text:hover::placeholder,
+.online-text:focus::placeholder {
+  color: #ffffff;
+}
+
+.online-input-long {
+  width: 270px;
+}
+
+.online-btn {
+  color: var(--first-btn-color);
+}

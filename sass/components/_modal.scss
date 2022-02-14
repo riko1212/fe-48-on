@@ -1,0 +1,161 @@
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.267);
+  position: fixed;
+  top: 0;
+  transition: opacity 500ms, visibility 500ms;
+}
+
+.backdrop.is-hidden {
+  .modal {
+    transform: rotate(-300deg) scale(0.5);
+  }
+}
+
+.modal {
+  width: 500px;
+  min-height: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0) scale(1);
+  transition: transform 500ms;
+  padding: 40px;
+  font-size: 5px;
+}
+
+.modal-close-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #999999;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #303030;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-input-wrap {
+  position: relative;
+  display: block;
+}
+
+.form-field {
+  margin-bottom: 10px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+
+  padding-left: 30px;
+  font-size: 14px;
+  color: teal;
+  &:focus {
+    border-color: var(--accent-color);
+  }
+  &::placeholder {
+    color: tomato;
+  }
+}
+
+.modal-icon {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  .modal-input:focus + & {
+    fill: var(--accent-color);
+  }
+}
+
+/* .modal-input:required {
+  border-color: purple;
+} */
+
+.modal-label {
+  font-size: 1em;
+  color: #999999;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.modal-text {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  padding: 10px;
+  resize: none;
+  outline: none;
+}
+
+.modal-check-text {
+  font-size: 14px;
+  color: #999999;
+  display: flex;
+  align-items: center;
+}
+
+.modal-check-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-check-icon {
+  fill: transparent;
+}
+
+.modal-check {
+  &:checked + &-text > span {
+    background-color: var(--accent-color);
+    border: none;
+  }
+  &:checked + &-text svg {
+    fill: teal;
+  }
+}
+
+/* .modal-check-text::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  margin-right: 5px;
+}
+
+.modal-check:checked + .modal-check-text::before {
+  background-color: var(--accent-color);
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border: none;
+} */
