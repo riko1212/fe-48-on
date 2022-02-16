@@ -1,7 +1,17 @@
 .pre-title {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
+  @extend %align-list;
+  @include font(11px, 600, 15px, 0.1em);
+  // font-weight: 600;
+  // font-size: 11px;
+  // line-height: 1.36;
+  // letter-spacing: 0.1em;
+}
+
+.pre-title--light-theme {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.pre-title--dark-theme {
+  color: var(--first-text-color);
 }

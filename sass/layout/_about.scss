@@ -3,36 +3,40 @@
   padding-bottom: 121px;
 }
 
-.about-container {
+.about__container {
   display: flex;
 }
 
 .about-list {
   display: flex;
   flex-shrink: 0;
+}
+
+.about__list {
   margin-right: 64px;
 }
 
-.about-item + .about-item {
+.about-list__item + .about-list__item {
   margin-left: 30px;
 }
 
-.about-pre-title {
-  color: var(--first-text-color);
+.about-wrap__pre-title {
   margin-bottom: 20px;
 }
 
-.about-title {
+.about-wrap__title {
   color: var(--second-title-color);
   margin-bottom: 20px;
 }
 
-.about-after-title {
+.about-wrap__after-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
   color: #555555;
-  margin-bottom: 20px;
 }
 
-.about-text {
+.about-wrap__text {
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
@@ -40,7 +44,7 @@
   margin-bottom: 40px;
 }
 
-.about-btn {
+.about-wrap__btn {
   color: var(--second-btn-color);
   &:hover,
   &:focus {

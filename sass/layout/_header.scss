@@ -15,25 +15,23 @@
   margin-right: 73px;
 }
 
-.header-container {
-  display: flex;
-  align-items: center;
+.header__container {
+  @extend %align-list;
 }
 
 .navigation {
-  display: flex;
-  align-items: center;
+  @extend %align-list;
 }
 
-.header-list {
+.nav-list {
   display: flex;
 }
 
-.header-item + .header-item {
+.nav-list__item + .nav-list__item {
   margin-left: 40px;
 }
 
-.header-link {
+.nav-list__link {
   color: var(--header-text-color);
   transition: color 300ms linear;
   &:hover,
@@ -46,11 +44,11 @@
   margin-left: auto;
 }
 
-.header-link-tel {
+.header-connect__tel {
   color: var(--header-text-color);
 }
 
-.header-btn {
+.header-connect__btn {
   color: var(--first-btn-color);
   margin-left: 40px;
   &:hover,
