@@ -1,7 +1,10 @@
 .pre-title {
   text-transform: uppercase;
   @extend %align-list;
-  @include font(11px, 600, 15px, 0.1em);
+  @include font(11px, 600, 21px, 0.1em);
+  @include tab {
+    @include font(11px, null, 15px, null);
+  }
   // font-weight: 600;
   // font-size: 11px;
   // line-height: 1.36;

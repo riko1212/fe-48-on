@@ -14,7 +14,7 @@
 }
 
 .modal {
-  width: 500px;
+  width: 100%;
   min-height: 500px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -25,6 +25,12 @@
   transition: transform 500ms;
   padding: 40px;
   font-size: 5px;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
 }
 
 .modal-close-btn {
