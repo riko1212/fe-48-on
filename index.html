@@ -23,7 +23,7 @@
   </head>
   <body>
     <!-- Header -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <nav class="navigation">
           <a href="" class="logo"
@@ -54,11 +54,57 @@
             онлайн-запись
           </button>
         </div>
+        <button type="button" class="menu-open-btn">O</button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden">
+        <div class="container">
+          <div class="mob-menu-top">
+            <button type="button" class="menu-close-btn">X</button>
+            <ul class="mob-menu-list list">
+              <li class="mob-menu-list__item">
+                <a href="" class="mob-menu-list__link">О нас</a>
+              </li>
+              <li class="mob-menu-list__item">
+                <a href="./portfolio.html" class="mob-menu-list__link"
+                  >Услуги и цены</a
+                >
+              </li>
+              <li class="mob-menu-list__item">
+                <a href="#masters" class="mob-menu-list__link">Мастера</a>
+              </li>
+              <li class="mob-menu-list__item">
+                <a href="" class="mob-menu-list__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu-bottom">
+            <div class="mob-contacts">
+              <a href="tel:+380441111111" class="mob-contacts__tel"
+                >+38 044 111 11 11</a
+              >
+              <button
+                type="button"
+                class="mob-contacts__btn btn"
+                data-modal-open
+              >
+                онлайн-запись
+              </button>
+            </div>
+            <ul class="mob-soc-list list">
+              <li class="mob-soc-list__item">
+                <a href="" class="mob-soc-list__link">Instagram</a>
+              </li>
+              <li class="mob-soc-list__item">
+                <a href="" class="mob-soc-list__link">Youtube</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <!-- Hero -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container hero__container">
           <div class="hero-soc">
             <ul class="soc-list list">
@@ -79,12 +125,12 @@
             </p>
             <h1 lang="en" class="hero-content__title">BarberShop</h1>
             <p class="hero-content__after-title">
-              Мы эксперты в модных мужских стрижках.<br />
-              Работаем быстро, осторожно и со вкусом.
+              Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно
+              и со вкусом.
             </p>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- About -->
       <!-- <section class="about section">
         <div class="container about__container">
@@ -315,12 +361,43 @@
           <h2 class="visually-hidden">Галерея</h2>
           <ul class="list gallery-list">
             <li class="gallery-item">
-              <img
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery-img-1.jpg     1x,
+                    ./images/gallery-img-1-2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/gallery-img-1-tab.jpeg    1x,
+                    ./images/gallery-img-1-tab-2x.jpeg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/gallery-img-1-mob.jpeg    1x,
+                    ./images/gallery-img-1-mob-2x.jpeg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/gallery-img-1.jpg"
+                  alt="барбер стрижет клиента"
+                />
+              </picture>
+              <!-- <img
+                srcset="
+                  ./images/gallery-img-1.jpg     1x,
+                  ./images/gallery-img-1-2x.jpeg 2x
+                "
                 src="./images/gallery-img-1.jpg"
                 alt="барбер стрижет клиента"
                 width="270"
                 height="360"
-              />
+              /> -->
             </li>
             <li class="gallery-item">
               <img
@@ -412,7 +489,7 @@
         <li><a href="">Youtube</a></li>
       </ul>
     </footer> -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           X
@@ -490,6 +567,7 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
   ß
 </html>
